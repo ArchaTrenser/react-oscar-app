@@ -1,0 +1,324 @@
+.oscar
+{
+    color: rgba(218, 165, 32, 0.582); 
+    background-image: linear-gradient(rgba(0,0,0,.85) 15%,rgba(0,0,0,.2) 40%,#000 90%);
+    background-attachment: fixed;
+}
+.movieHead
+{
+    color: whitesmoke;
+    text-align: center;
+    margin-right: 50px;
+    font-family: 'Patua One', cursive;
+}
+.oscarTitle
+{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+    text-shadow: 2px 2px steelblue;
+    font-size: 50px;
+}
+.oscarImg
+{
+    margin-top: 30px;
+}
+.nomination
+{
+    display: flow-root;
+    border-radius: 12px;
+    background: black;
+    color: rgba(218, 165, 32, 0.582);
+}
+.nomination h1
+{
+    text-align: center;
+}
+.nominationList
+{
+    display: inline-block;
+    padding: 34px;
+}
+.oscarList
+{
+    margin: 0px 0px 50px 300px;
+    color: white;
+    
+}
+.oscarList > p{
+    display: inline-block;
+    position: absolute;
+   
+}
+.details
+{
+    position: relative;
+    top: -245px;
+    left: 315px;
+    font-family: 'Righteous', cursive;
+    width: 70%;
+    font-size: 20px;
+}
+.filter
+{
+    font-size: 18px !important;
+    top :10px !important;
+}
+.nominyDetails
+{
+    text-align: center;
+}
+.nominyList
+{
+    display: flow-root;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px;
+}
+.overview
+{
+    font-family: 'Cormorant Upright', serif;
+}
+
+.name 
+{
+    color: rgb(241, 234, 234);
+}
+.character
+{
+    color: white;
+    font-weight: 5;
+    font-size: 12px;
+}
+.castList , .flexList
+{
+    display: flex;
+}
+.videoList
+{
+    display: flex;
+    overflow: auto;
+}
+.thumbs-wrapper{
+    display: none;
+}
+.tabs
+{
+    color: wheat;
+}
+.btn-right , .btn-left
+{
+    font-size: 60px;
+    position: relative;
+    top: 50px;
+}
+
+.castListItem
+{
+    padding: 20px;
+    margin-left: 10px;
+    background: #80808047;
+    border: 1px solid #80808029;
+    box-shadow: 1px 2px 5px #545252;
+}
+.reviewListItem
+{
+    padding: 20px;
+    margin-left: 10px;
+    background: #80808047;
+    border: 1px solid #80808029;
+    box-shadow: 1px 2px 5px #545252;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+button:hover
+{
+    cursor: pointer;
+}
+button:disabled
+{
+    color: #545252;
+    cursor: not-allowed;
+}
+.posterHead
+{
+    margin-top: 50px;
+}
+.tabListItem
+{
+    margin-left: 60px;
+}
+.author
+{
+    font-size: 22px;
+    margin-left: 16px;
+}
+.content
+{
+    font-size: 16px;
+    word-spacing: 5px;
+    color: whitesmoke;
+}
+.reviewList
+{
+    width:100%;
+}
+.actor
+{
+    font-family: 'Buenard', serif;
+    font-size: 17px;
+    color:white
+}
+.actorDetails
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profile-pic
+{
+    margin-right: 70px;
+}
+.profile-name
+{
+    font-family: 'Patua One', cursive;
+    width: 100%;
+    font-size: 45px;
+}
+.biography
+{
+    font-family: 'Cormorant Upright', serif;
+    font-size: 30px;
+}
+.personal
+{
+    display: flex;
+    flex-direction: row;
+}
+.personalInfo
+{
+    font-family: 'Buenard', serif;
+    margin-right: 50px;
+    color: white;
+}
+.personalInfo h1
+{
+    color: white;
+}
+.personal-title
+{
+    font-size: 17px;
+    font-weight: bold;
+}
+.movieList
+{
+    display: flex;
+}
+.movieListItem
+{
+    padding: 20px;
+}
+.gallery
+{
+    display: flex;
+}
+.photo
+{
+    padding: 20px;
+}
+.ant-tabs-nav .ant-tabs-tab-active
+{
+    color: white !important;
+    font-size: 15px !important;
+}
+.ant-tabs-nav
+{
+    color: white !important;
+}
+.backdropList
+{
+    overflow: auto;
+    display: flex;
+}
+.pie
+{
+    position: relative;
+    right: 300px;
+}
+.pie-sub-title
+{
+    color: white !important;
+    font-size: 17px!important;
+    position: relative;
+    right: 90px; 
+    line-height: 65px !important;
+}
+.pie-stat
+{
+    position: relative!important;
+    top: -13px!important;
+    font-size: 20px!important;
+    right: 0px;
+}
+.ant-select-show-search ,.ant-select-auto-complete ,.ant-select ,.ant-select-combobox ,.ant-select-enabled
+{
+    width:200px !important;
+    transition: width 0.5s ease-in-out;
+}
+.ant-select-show-search ,.ant-select-auto-complete ,.ant-select , .ant-select-open ,.ant-select-focused ,.ant-select-combobox ,.ant-select-enabled:focus
+{
+    width: 260px !important;
+}
+.antd-pro-charts-pie-pie
+{
+    position: relative;
+    width: 260px !important;
+    left: 3px;
+}
+#canvas_1
+{
+    margin-left: 95px!important;
+    width: 200px!important;
+    height: 70px!important;
+}
+.ant-rate{
+    position: relative;
+    top: 10px !important;
+    left: 20px !important;
+}
+.btn-fav
+{
+   position: relative;
+   top: 0px;
+   left : 650px;
+   border: 2px solid white;
+   border-radius: 25px;
+   width: 50px;
+   height: 50px;
+   color: white;
+   margin-right: 30px;
+
+}
+.nominyDetails p{
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+.btn-fav-nominy{
+    position: relative;
+    top: 120px;
+    border: 2px solid white;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    margin-right: 30px;
+    right: 40px;
+}
+.fav-hover
+{
+    position: relative;
+    border: none;
+    color: white;
+    font-size: 18px;
+}

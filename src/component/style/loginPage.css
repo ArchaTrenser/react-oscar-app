@@ -1,0 +1,34 @@
+.box-layout
+{
+    /* background-image: url("../../component/LoginPage/backdrop.png"); */
+    /* background-image: url("../../component/LoginPage/backdrop.png"),linear-gradient(#0c0c0c 5%,rgba(0,0,0,.2) 40%,#141414 90%); */
+    background-size:cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw; 
+    align-items: center;
+}
+.box-layout__box
+{
+    text-align: center;
+    width: 290px;
+    border-radius: 5px;
+    padding: 6.2rem 2.6rem;
+    border: 1px solid;
+    box-shadow: 1px 1px 100px #131212;
+}
+.box-layout__title
+{
+    color: white;
+    font-family: 'Elsie Swash Caps', cursive;
+    margin: 0 0 20px 0;
+}
+.box-layout__box button
+{
+    background: #b32d00;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}

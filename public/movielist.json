@@ -1,0 +1,96 @@
+{
+    "oscarMovies":
+    [
+        {
+            "year" : "2017" ,
+            "title" : "The Shape of Water"
+        },
+        {
+            "year" : "2016" ,
+            "title" : "Moonlight"
+        },
+        {
+            "year":"2015",
+            "title":"Spotlight"
+        },
+        {
+            "year" :"2014" ,
+            "title":"Birdman"
+        },
+        {
+            "year" : "2013",
+            "title": "12 Years a Slave"
+        },
+        {
+            "year" : "2012",
+            "title": "Argo"
+        },
+        {
+            "year" : "2011",
+            "title" : "The Artist"
+        },
+        {
+            "year" : "2010",
+            "title" : "The King's Speech"
+        },
+        {
+            "year" : "2009",
+            "title":"The Hurt Locker"
+        },
+        {
+            "year" : "2008",
+            "title" : "Slumdog Millionaire"
+        },
+        {
+            "year" : "2007",
+            "title" : "No Country for Old Men"
+        },
+        {
+            "year" : "2006",
+            "title" :"The Departed"
+        }
+    ],
+    "nomainMovies":
+    [
+        {
+          "year":"2017",
+          "movies": ["The Shape of Water","Call Me by Your Name","Coco","A Fantastic Woman","Dear Basketball","Phantom Thread","Get Out","I, Tonya"] 
+        },
+        {
+            "year":"2016",
+            "movies":["Moonlight","The Jungle Book","O.J.: Made in America","Piper","Sing","La La Land","Hacksaw Ridge","Manchester by the Sea","Arrival","Fences "]
+        },
+        {
+            "year" : "2015",
+            "movies" :["Spotlight","The Hateful Eight","Ex Machina","Inside Out","Mad Max: Fury Road","The Revenant","Bridge of Spies","The Big Short","Room"]
+        },
+        {
+            "year":"2014",
+            "movies":["Birdman","Ida","Still Alice","Feast","Big Hero 6","The Grand Budapest Hotel","Whiplash","The Imitation Game","American Sniper","Boyhood","Interstellar"]
+        },
+        {
+            "year":"2013",
+            "movies":["12 Years a Slave","The Lady in Number 6","Gravity","Dallas Buyers Club","Helium","Frozen","The Great Gatsby","Her","Blue Jasmine","The Great Beauty"]
+        },
+        {
+            "year":"2012",
+            "movies":["Argo","Life of Pi","Les Misérables","Lincoln","Django Unchained","Skyfall","Silver Linings Playbook"]
+        },
+        {
+            "year":"2011",
+            "movies":["The Artist","Hugo","The Iron Lady","The Descendants","The Girl with the Dragon Tattoo","Midnight in Paris","The Help"]
+        },
+        {
+            "year":"2010",
+            "movies":["Inception","The King's Speech","The Social Network","The Fighter","Toy Story 3","Alice in Wonderland","Black Swan"]
+        },
+        {
+            "year":"2009",
+            "movies":["The Hurt Locker","Avatar","Precious","Up","Crazy Heart","Star Trek","the Blind Side","The Clove"]
+        },
+        {
+            "year":"2008",
+            "movies":["Slumdog Millionaire","Milk","The Dark Knight","WALL-E","The Reader","Alice in Wonderland","The Duchess"]
+        }
+    ]
+}

@@ -1,26 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
-class App extends Component {
+import './component/style/custom.css'
+import { Router, Route, Switch } from 'react-router-dom';
+import HomePage from './component/HomePage/HomePage';
+import createHistory from 'history/createBrowserHistory';
+import NotFoundPage from './component/NotFoundPage/NotFoundPage';
+import LoginPage from './component/LoginPage/LoginPage';
+import ActorPage from './component/ActorPage/ActorPage';
+import MoviePage from './component/MoviePage/MoviePage';
+import FavouritesPage from './component/HomePage/Favourites/FavouritesPage';
+export const history = createHistory();
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <Router history={history}>  
+     <div className="App">
+     <Switch>
+       <Route path="/" component={HomePage}  exact={true}/>
+       <Route path="/movie/:id" component={MoviePage} />
+       <Route path="/login" component={LoginPage} />
+       <Route path="/actor/:id" component={ActorPage} /> 
+       <Route path="/favourites" component={FavouritesPage} />
+       <Route component={NotFoundPage} />
+      </Switch> 
       </div>
+      </Router>
     );
   }
 }
