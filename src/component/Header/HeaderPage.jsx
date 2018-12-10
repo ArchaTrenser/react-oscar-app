@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import { AutoComplete } from 'antd';
 import url from '../url/urls';
 import movieApiHanlder from '../../axiosMovie'
-import './Header.css';
-import '../../component/style/container.css';
-import 'ant-design-pro/dist/ant-design-pro.css';
+import {MainHeader , HeaderTitle , SearchBar , LoginButton} from './Header-Style';
 import { withRouter } from "react-router-dom";
+import { FlexContainer ,ContentContainer, HomeButton } from '../style/CommonStyles';
+import 'ant-design-pro/dist/ant-design-pro.css';
 
-class Header extends React.Component
+
+class HeaderPage extends React.Component
 {
   constructor(props) {
     super(props);
@@ -55,13 +56,13 @@ class Header extends React.Component
   render() {
     const { dataSource } = this.state;
     return (
-      <header className="header">
-        <div className="content-container">
-          <div className="flex-container">
-            <Link to="/" activeclassname="is-active" className="header__title">
-              <h1>Oscar Tracks</h1>
+      <MainHeader>
+        <ContentContainer>
+          <FlexContainer>
+            <Link to="/" activeclassname="is-active">
+              <HeaderTitle>Oscar Tracks</HeaderTitle>
             </Link>
-            <div className="search-bar">
+            <SearchBar>
               <AutoComplete
                 key = {dataSource+1}
                 dataSource={dataSource}
@@ -70,28 +71,26 @@ class Header extends React.Component
                 onSearch={this.handleSearch}
                 placeholder="Search Movies"
                 />
-              <button><i className="fas fa-search"></i></button>
-            </div>
-          </div>
+              <HomeButton><i className="fas fa-search"></i></HomeButton>
+            </SearchBar>
+          </FlexContainer>
           <Link to="/favourites" >
-            <button
-               className="login-btn">
-               <i class="fas fa-heart"></i>
-            </button>
+            <LoginButton>
+               <i className="fas fa-heart"></i>
+            </LoginButton>
           </Link>
           <Link to="/login" >
-            <button
-               className="login-btn">
+            <LoginButton>
               <i className="fas fa-power-off"></i>
-            </button>
+            </LoginButton>
           </Link>
-        </div>
-      </header>
+        </ContentContainer>
+      </MainHeader>
     )
   }
 }
 
-export default  withRouter (Header);
+export default  withRouter (HeaderPage);
 
 
 

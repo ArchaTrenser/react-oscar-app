@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from '../../Header/Header';
 import movieApiHanlder from '../../../axiosMovie';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import FavouritesList from './FavouritesList';
-
+import HeaderPage from '../../Header/HeaderPage';
 
 class FavouritesPage extends React.Component {
     state = {
@@ -47,7 +46,7 @@ class FavouritesPage extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <HeaderPage />
                 <div className="page-header">
                     <div className="content-container">
                         <div className="flex-container-header">

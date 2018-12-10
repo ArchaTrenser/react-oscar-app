@@ -93,7 +93,7 @@ class FrontPage extends React.Component {
                                         <Pie className="pie" percent={this.props.vote_average * 10} subTitle="User Vote :" total={`${this.props.vote_average * 10}%`} height={100} />
                                         <Tooltip placement="bottomLeft" title="Mark as Favourite">
                                             <button style={{ position: 'relative', top: '10px', border: '2px solid white', borderRadius: '25px', width: '50px', height: '50px', color: 'white', marginRight: '30px' }} onClick={() => this.onIconchange()}>
-                                                {this.state.addFav ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
+                                                {this.state.addFav ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}
                                             </button>
                                         </Tooltip>
                                         <Tooltip placement="bottomLeft" title="Rate it">

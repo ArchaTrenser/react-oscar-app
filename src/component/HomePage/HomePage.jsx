@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../Header/Header';
 import OscarList from './OscarList';
 import NominationList from './NominationList';
+import HeaderPage from '../Header/HeaderPage';
 
 const HomePage =()=>(
     <div>
-       <Header />
+       <HeaderPage />
        <OscarList />
        <NominationList />
     </div>

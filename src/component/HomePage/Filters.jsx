@@ -2,7 +2,7 @@ import React from 'react';
 import { Select } from 'antd';
 import '../style/custom.css';
 import '../style/page_header.css';
-import '../style/container.css';
+//import '../style/container.css';
 import 'antd/dist/antd.css';
 
 class Filters extends React.Component {

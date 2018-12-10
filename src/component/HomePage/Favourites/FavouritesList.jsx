@@ -6,7 +6,6 @@ import { startRemoveFavs } from '../../../actions/movie';
 import { withRouter } from "react-router-dom";
 import { Popconfirm, message, Button } from 'antd';
 import '../../style/custom.css';
-import '../../style/container.css';
 import 'ant-design-pro/dist/ant-design-pro.css';
 
 class FavouritesList extends React.Component {
@@ -48,7 +47,7 @@ class FavouritesList extends React.Component {
                                 <Popconfirm title="Are you sure delete this task?" onConfirm={() => this.onIconchange(this.props.id)} onCancel={this.cancel} okText="Yes" cancelText="No">
                                 <Tooltip placement="bottomLeft" title="Remove from Favourites">
                                     <Button className="btn-favs" >
-                                        {this.state.showIcon ? <i className="far fa-heart" style={{ color: 'white' }}></i> : <i class="fas fa-heart"></i>}
+                                        {this.state.showIcon ? <i className="far fa-heart" style={{ color: 'white' }}></i> : <i className="fas fa-heart"></i>}
                                     </Button>
                                 </Tooltip>
                                 </Popconfirm>

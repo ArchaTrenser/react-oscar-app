@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Header/Header';
 import Poster from './Poster';
 import '../style/custom.css';
 import '../style/loader.css';
@@ -10,6 +9,7 @@ import OverView from './OverView/OverView';
 import Review from './Review/Review';
 import Video from './Video/Video';
 import Photos from '../MoviePage/Photo/Photos';
+import HeaderPage from '../Header/HeaderPage';
 
 const MoviePage =(props)=>{
     const TabPane = Tabs.TabPane
@@ -20,7 +20,7 @@ const MoviePage =(props)=>{
     return(
     <div>
        {!props &&<div className="loader">Loading...</div>}
-       <Header />
+       <HeaderPage />
        {props ? <Poster id ={props.match.params.id}/> : <div className="loader">Loading...</div> } 
        <div className="content-container">
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../Header/Header';
 import Actor from './Actor';
+import HeaderPage from '../Header/HeaderPage';
 
 const ActorPage =(props)=>{
     console.log(props);
     return(
     <div>
-       <Header />
+       <HeaderPage />
        <Actor id={props.match.params.id}/>
     </div>
 

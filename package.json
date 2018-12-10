@@ -32,7 +32,6 @@
     "firebase": "^5.5.9",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
-    "html-to-json": "^0.6.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "html2json": "^1.0.2",
     "identity-obj-proxy": "3.0.0",

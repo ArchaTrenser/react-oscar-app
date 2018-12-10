@@ -6,7 +6,7 @@ import { Tooltip } from 'antd';
 import axios from 'axios';
 import '../style/custom.css';
 import '../style/loader.css';
-import '../style/container.css';
+//import '../style/container.css';
 
 class OscarListItem extends React.Component 
 {
@@ -64,7 +64,8 @@ class OscarListItem extends React.Component
             <div className="content-container inner-container" style={{ backgroundImage: 'url(' + this.props.backdrop_path + ')'}}>
                 <Tooltip placement="bottomLeft" title="Mark as Favourite">
                     <button className="btn-fav" style= {{left : '1445px'}} onClick={this.onIconchange}>
-                        {this.state.addFav ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
+                        {this.state.addFav ? <i className
+                        ="fas fa-heart"></i> : <i className="far fa-heart"></i>}
                     </button>
                 </Tooltip>
                 <Link to={`/movie/${this.props.id}`}>

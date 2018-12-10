@@ -79,7 +79,7 @@ class NominationListItem extends React.Component {
                 <div onClick={this.linkTo}>
                     <img src={this.poster_path} alt="no poster"></img>
                     <button className="btn-fav-nominy fav-hover" onClick={(event)=>this.onIconchange(event)}>
-                        {this.state.addFav ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
+                        {this.state.addFav ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}
                     </button>
                 </div>
                 <div className="nominyDetails">
