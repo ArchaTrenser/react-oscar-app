@@ -1,21 +1,60 @@
 import React from 'react';
 import url from '../url/urls';
 import { connect } from 'react-redux';
-import { addFavs } from './../../actions/movie';
-import { Link } from 'react-router-dom';
+import { addFavs , startRemoveFavs } from './../../actions/movie';
 import '../style/custom.css';
+import { withRouter } from 'react-router-dom';
+import axios from 'axios';
 
 class NominationListItem extends React.Component {
     state = {
-        showIcon: false
+        addFav: false
     }
+
     onIconchange = (event) => {
         event.stopPropagation();
-        this.props.addFavs(this.props)
-        this.setState(
-            {
-                showIcon: !this.state.showIcon
-            });
+        let addfav= this.state.addFav;
+      
+        console.log('before',addfav)
+        
+        addfav = !addfav;
+      
+        this.setState({ addFav:addfav });
+
+        console.log(this.props.movieid)
+        axios.get(`https://oscar-app-af339.firebaseio.com/users/${this.props.movieid}/favs.json`)
+            .then((response) => {
+                if(!response.data){
+                    this.props.addFavs(this.props) 
+                }
+                console.log(response.data)
+                    Object.keys(response.data).map(obj => {
+                        let id = response.data[obj].id
+                        console.log('firebase',id)
+                        console.log('props',this.props.id)
+                        console.log('after',addfav)
+                        if(id === this.props.id && !addfav)
+                        {
+                        console.log('removing')
+                            this.props.startRemoveFavs({ id: obj})
+                            addfav= !addfav
+                        }
+                        else if(addfav)
+                        {
+                           if( id != this.props.id){
+                        console.log('adding')
+
+                            this.props.addFavs(this.props) 
+                            addfav= !addfav
+                           }
+                        }
+                        
+                    })
+               
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
     poster_path = url.folder + this.props.poster_path;
     formatDate(release_date) {
@@ -30,15 +69,19 @@ class NominationListItem extends React.Component {
         let date = release_date.slice(8, 10);
         return date + ' ' + monthNames[month] + ' , ' + year;
     }
+    linkTo =()=>
+    {
+        this.props.history.push(`/movie/${this.props.id}`)
+    }
     render() {
         return (
             <div className="nominationList">
-                <Link to={`/movie/${this.props.id}`}>
+                <div onClick={this.linkTo}>
                     <img src={this.poster_path} alt="no poster"></img>
                     <button className="btn-fav-nominy fav-hover" onClick={(event)=>this.onIconchange(event)}>
-                        {this.state.showIcon ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
+                        {this.state.addFav ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
                     </button>
-                </Link>
+                </div>
                 <div className="nominyDetails">
                     <p> {this.props.title} </p>
                     <p> Released : {this.formatDate(this.props.release_date)} </p>
@@ -49,9 +92,14 @@ class NominationListItem extends React.Component {
     }
 }
 
-
 const mapDispatchToProps = (dispatch) => ({
-    addFavs: (movie) => dispatch(addFavs(movie))
-});
-
-export default connect(undefined, mapDispatchToProps)(NominationListItem);
+    addFavs: (movie) => dispatch(addFavs(movie)),
+    startRemoveFavs: (data) => dispatch(startRemoveFavs(data))
+  });
+ 
+const mapStateToProps = (state) => {
+    return {
+        movieid: state.auth.uid
+    }
+}  
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NominationListItem));

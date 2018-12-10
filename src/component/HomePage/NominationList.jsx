@@ -36,12 +36,12 @@ class NominationList extends React.Component {
             })
     }
     getYear = (e) => {
-        let inputYear = e.target.value;
+        let inputYear = e;
         console.log(inputYear);
         axios.get(url.jsonURL)
             .then(response => {
                 response.data.nomainMovies.map((nominationMovies) => (
-                    nominationMovies.year === inputYear ? nominationMovies.movies.map((movie) => {
+                    nominationMovies.year == inputYear ? nominationMovies.movies.map((movie) => {
                         console.log(movie)
                         return this.getNomationMovie(movie)
                     }) : ""

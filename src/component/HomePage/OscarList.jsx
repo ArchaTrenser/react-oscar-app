@@ -28,7 +28,7 @@ class OscarList extends React.Component
         movieApiHanlder.get(url.searchURL+query)
         .then(response => 
          {
-             console.log(response.data.results)
+            // console.log(response.data.results)
             this.setState({
                 id : response.data.results[0].id,
                 title: response.data.results[0].title,
@@ -52,12 +52,12 @@ class OscarList extends React.Component
     }
     getYear =(e) =>
     {
-        let inputYear = e.target.value;
-        console.log('getyear',inputYear);
+        let inputYear = e;
         axios.get(url.jsonURL)
         .then(response =>
             {
-                this.getOscarMovie( response.data.oscarMovies.map((movie) => movie.year === inputYear ? movie.title : ""));
+                let movie = response.data.oscarMovies.find((movie) => movie.year == inputYear )
+                this.getOscarMovie(movie.title);
             })
     }
     render()
@@ -84,4 +84,3 @@ class OscarList extends React.Component
 }
 
 export default OscarList;
-

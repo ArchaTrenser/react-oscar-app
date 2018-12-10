@@ -6,21 +6,25 @@ import movieApiHanlder from '../../axiosMovie'
 import './Header.css';
 import '../../component/style/container.css';
 import 'ant-design-pro/dist/ant-design-pro.css';
+import { withRouter } from "react-router-dom";
 
 class Header extends React.Component
 {
-  state = {
-    dataSource: [],
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: [],
+
+    };
   }
-  onSelect(value) {
+  onSelect = (value)=> {
     console.log('onSelect', value);
     movieApiHanlder.get(url.searchURL+value)
         .then(response => 
          {
              console.log(response.data.results)
              let id =  response.data.results[0].id
-             console.log(id)
-             console.log(this.props.match.url+`movie/${id}`)
+             console.log(this.props)
              this.props.history.push(this.props.match.url+`movie/${id}`)
          })
         .catch(error =>
@@ -87,7 +91,7 @@ class Header extends React.Component
   }
 }
 
-export default Header;
+export default  withRouter (Header);
 
 
 

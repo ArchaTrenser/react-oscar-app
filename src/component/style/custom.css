@@ -84,12 +84,15 @@
 .name 
 {
     color: rgb(241, 234, 234);
+    text-align: center;
 }
 .character
 {
     color: white;
     font-weight: 5;
     font-size: 12px;
+    line-height: 0px;
+    text-align: center;
 }
 .castList , .flexList
 {
@@ -151,14 +154,16 @@ button:disabled
 }
 .author
 {
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 16px;
+    color: white;
 }
 .content
 {
     font-size: 16px;
     word-spacing: 5px;
     color: whitesmoke;
+    margin-top: 10px;
 }
 .reviewList
 {
@@ -321,4 +326,36 @@ button:disabled
     border: none;
     color: white;
     font-size: 18px;
+}
+
+.btn-favs
+{
+    background: none !important;
+    border-radius: 25px !important;
+    color: white !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+.ant-collapse
+{
+    background: #80808047 !important;
+    border : #80808047 !important;
+}
+.movieBack
+{
+   background-image: linear-gradient(rgba(0,0,0,.85) 15%,rgba(0,0,0,.2) 40%,#000 90%);
+   background-attachment: fixed;
+}
+.ant-collapse-header{
+    color: white !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+}
+.input-btn
+{
+    width: 90px;
+    font-size: 20px;
+    background:  rgba(0, 0, 0, 0.65);
+    border: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
 }

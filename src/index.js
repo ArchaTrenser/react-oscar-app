@@ -24,12 +24,16 @@ firebase.auth().onAuthStateChanged((user)=>
     {
         store.dispatch(login(user.uid));
         console.log('logined');
-        history.push('/');
+        if(history.location.pathname === '/login')
+        {
+          history.push("/");
+        }
     }
     else
     {
         console.log('logout')
         store.dispatch(logout());
+        history.push("/");
     }
 })
 serviceWorker.unregister();

@@ -17,7 +17,6 @@ class Filters extends React.Component {
                 this.state.children.push(
                     <Select.Option  key={this.state.endYear} value={this.state.endYear}> {this.state.endYear} </Select.Option >
                 );
-                console.log(this.state.children)
             }
             return this.state.children
 
@@ -33,17 +32,12 @@ class Filters extends React.Component {
                 <div className="content-container">
                     <div className="flex-container-header">
                         <h1 className="movieHead">{this.props.title}</h1>
-                        {/* <select
-                            className="filter" 
-                            onChange={this.props.onChange}>
-                            {this.createYear()}
-                        </select> */}
                         <Select
                             className="filter" 
                             onFocus={this.onhandleChange}
                             defaultValue={this.state.endYear}
-                            style={{ width: '100px',height:'30px' }}
-                            onChange={(e)=>this.onChange(e)}
+                            style={{ width: '90px',height:'30px' }}
+                            onChange={this.props.onChange}
                         >
                             {this.state.children}
                         </Select>
@@ -54,8 +48,6 @@ class Filters extends React.Component {
     }
 
 }
-
-
 
 export default Filters;
 
